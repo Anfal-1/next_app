@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import Image from 'next/image'
-import { Download } from 'lucide-react'
+import { Download, Menu } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -80,9 +80,6 @@ export default function Dashboard() {
         </header>
 
         <main className="p-4 md:p-6 overflow-auto h-[calc(100vh-64px)]">
-          {/* التحليل الذكي أول شيء */}
-          <AIAnalysisSection />
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <SummaryCards />
           </div>
@@ -176,6 +173,8 @@ export default function Dashboard() {
               </div>
             </CardContent>
           </Card>
+
+          <AIAnalysisSection />
         </main>
       </div>
     </div>

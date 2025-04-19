@@ -17,17 +17,10 @@ import { AIAnalysisSection } from '@/components/ai-analysis/ai-analysis-section'
 
 // مكونات تُحمّل فقط على العميل
 const MapView = dynamic(() => import('@/components/map-view'), { ssr: false })
-const NDVIChart = dynamic(() => import('@/components/ndvi-chart'), {
-  ssr: false,
-})
+const NDVIChart = dynamic(() => import('@/components/ndvi-chart'), { ssr: false })
 const SPIChart = dynamic(() => import('@/components/spi-chart'), { ssr: false })
-const SoilErosionTable = dynamic(
-  () => import('@/components/soil-erosion-table'),
-  { ssr: false }
-)
-const TreeMonitoring = dynamic(() => import('@/components/tree-monitoring'), {
-  ssr: false,
-})
+const SoilErosionTable = dynamic(() => import('@/components/soil-erosion-table'), { ssr: false })
+const TreeMonitoring = dynamic(() => import('@/components/tree-monitoring'), { ssr: false })
 
 export default function Dashboard() {
   const { toast } = useToast()
@@ -106,78 +99,3 @@ export default function Dashboard() {
 
             <Card className="dark:bg-gray-800 dark:border-gray-700">
               <CardContent className="p-0">
-                <div className="p-4 border-b border-green-100 dark:border-gray-700">
-                  <h2 className="text-lg font-semibold text-green-800 dark:text-green-400">
-                    {t('ndvi.title')}
-                  </h2>
-                  <p className="text-sm text-green-600 dark:text-green-500">
-                    {t('ndvi.subtitle')}
-                  </p>
-                </div>
-                <div className="p-4 h-[400px]">
-                  <NDVIChart />
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <Card className="mb-6 dark:bg-gray-800 dark:border-gray-700">
-            <CardContent className="p-0">
-              <Tabs defaultValue="desertification">
-                <div className="p-4 border-b border-green-100 dark:border-gray-700 flex justify-between items-center">
-                  <div>
-                    <h2 className="text-lg font-semibold text-green-800 dark:text-green-400">
-                      {t('env.title')}
-                    </h2>
-                    <p className="text-sm text-green-600 dark:text-green-500">
-                      {t('env.subtitle')}
-                    </p>
-                  </div>
-                  <TabsList className="bg-green-100 dark:bg-gray-700">
-                    <TabsTrigger value="desertification">
-                      {t('env.desertification')}
-                    </TabsTrigger>
-                    <TabsTrigger value="drought">
-                      {t('env.droughtIndex')}
-                    </TabsTrigger>
-                    <TabsTrigger value="erosion">
-                      {t('env.soilErosion')}
-                    </TabsTrigger>
-                  </TabsList>
-                </div>
-
-                <TabsContent value="desertification" className="p-4">
-                  <DesertificationComparison />
-                </TabsContent>
-
-                <TabsContent value="drought" className="p-4">
-                  <SPIChart />
-                </TabsContent>
-
-                <TabsContent value="erosion" className="p-4">
-                  <SoilErosionTable />
-                </TabsContent>
-              </Tabs>
-            </CardContent>
-          </Card>
-
-          <Card className="mb-6 dark:bg-gray-800 dark:border-gray-700">
-            <CardContent className="p-0">
-              <div className="p-4 border-b border-green-100 dark:border-gray-700">
-                <h2 className="text-lg font-semibold text-green-800 dark:text-green-400">
-                  {t('tree.title')}
-                </h2>
-                <p className="text-sm text-green-600 dark:text-green-500">
-                  {t('tree.subtitle')}
-                </p>
-              </div>
-              <div className="p-4">
-                <TreeMonitoring />
-              </div>
-            </CardContent>
-          </Card>
-        </main>
-      </div>
-    </div>
-  )
-}
