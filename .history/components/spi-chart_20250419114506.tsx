@@ -118,5 +118,3 @@ export function SPIChart() {
     </div>
   )
 }
-
-export default SPIChart

@@ -15,7 +15,7 @@ import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import { useLanguage } from '@/contexts/language-context'
 import { useTheme } from 'next-themes'
 
-// Mock GeoJSON data for demonstration
+// بيانات GeoJSON تجريبية
 const mockGeoJsonData = {
   type: 'FeatureCollection',
   features: [
@@ -88,7 +88,7 @@ const mockGeoJsonData = {
   ],
 }
 
-// Style function for GeoJSON layers
+// نمط التلوين حسب NDVI
 const getStyle = (feature: any) => {
   const ndvi = feature.properties.ndvi
 
@@ -167,8 +167,7 @@ export function MapView() {
                   ? feature.properties.risk_ar
                   : feature.properties.risk_en
 
-              layer.bindPopup(`
-                <strong>${name}</strong><br/>
+              layer.bindPopup(`<strong>${name}</strong><br/>
                 NDVI: ${feature.properties.ndvi}<br/>
                 ${language === 'ar' ? 'مستوى الخطر' : 'Risk Level'}: ${risk}
               `)
@@ -187,5 +186,3 @@ export function MapView() {
     </MapContainer>
   )
 }
-
-export default MapView

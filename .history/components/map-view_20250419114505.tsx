@@ -187,5 +187,3 @@ export function MapView() {
     </MapContainer>
   )
 }
-
-export default MapView

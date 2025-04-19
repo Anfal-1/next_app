@@ -298,6 +298,7 @@ export function TreeMonitoring() {
                   <Progress
                     value={progressPercentage}
                     className="h-2 bg-green-100"
+                    indicatorClassName="bg-green-600"
                   />
                   <p className="text-xs text-green-600">
                     الهدف: {yearlyTarget.toLocaleString('ar-SA')} شجرة

@@ -2,13 +2,18 @@
 
 import dynamic from 'next/dynamic'
 
-const MapView = dynamic(() => import('./map-view'), { ssr: false })
-const NDVIChart = dynamic(() => import('./ndvi-chart'), { ssr: false })
-const SPIChart = dynamic(() => import('./spi-chart'), { ssr: false })
-const SoilErosionTable = dynamic(() => import('./soil-erosion-table'), {
+const MapView = dynamic<React.FC>(() => import('./map-view'), { ssr: false })
+const NDVIChart = dynamic<React.FC>(() => import('./ndvi-chart'), {
   ssr: false,
 })
-const TreeMonitoring = dynamic(() => import('./tree-monitoring'), {
+const SPIChart = dynamic<React.FC>(() => import('./spi-chart'), { ssr: false })
+const SoilErosionTable = dynamic<React.FC>(
+  () => import('./soil-erosion-table'),
+  {
+    ssr: false,
+  }
+)
+const TreeMonitoring = dynamic<React.FC>(() => import('./tree-monitoring'), {
   ssr: false,
 })
 

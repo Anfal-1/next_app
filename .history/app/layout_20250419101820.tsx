@@ -8,6 +8,8 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { LanguageProvider } from '@/contexts/language-context'
 import { Toaster } from '@/components/ui/toaster'
 
+const cairo = Cairo({ subsets: ['arabic'] })
+
 export const metadata: Metadata = {
   title: 'E-Trek | Environmental Monitoring System for Al-Qassim Region',
   description:
@@ -33,3 +35,5 @@ export default function RootLayout({
     </html>
   )
 }
+
+import './globals.css'

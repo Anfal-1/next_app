@@ -13,7 +13,6 @@ import {
 import { useLanguage } from '@/contexts/language-context'
 import { useTheme } from 'next-themes'
 
-// Mock data for NDVI values over time
 const ndviDataAr = [
   { month: 'يناير', ndvi: 0.32, average: 0.28 },
   { month: 'فبراير', ndvi: 0.38, average: 0.3 },
@@ -44,7 +43,7 @@ const ndviDataEn = [
   { month: 'Dec', ndvi: 0.38, average: 0.35 },
 ]
 
-export function NDVIChart() {
+function NDVIChart() {
   const { language, t } = useLanguage()
   const { theme } = useTheme()
   const isDark = theme === 'dark'

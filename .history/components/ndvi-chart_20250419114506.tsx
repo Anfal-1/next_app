@@ -103,5 +103,3 @@ export function NDVIChart() {
     </div>
   )
 }
-
-export default NDVIChart

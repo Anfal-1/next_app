@@ -1,31 +1,24 @@
-'use client'
+"use client"
 
-import dynamic from 'next/dynamic'
-
-const MapView = dynamic(() => import('./map-view'), { ssr: false })
-const NDVIChart = dynamic(() => import('./ndvi-chart'), { ssr: false })
-const SPIChart = dynamic(() => import('./spi-chart'), { ssr: false })
-const SoilErosionTable = dynamic(() => import('./soil-erosion-table'), {
-  ssr: false,
-})
-const TreeMonitoring = dynamic(() => import('./tree-monitoring'), {
-  ssr: false,
-})
-
-import { useState } from 'react'
-import Image from 'next/image'
-import { Download, Menu } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { useToast } from '@/components/ui/use-toast'
-import { useLanguage } from '@/contexts/language-context'
-import { Sidebar } from './sidebar'
-import { SummaryCards } from './summary-cards'
-import { DesertificationComparison } from './desertification-comparison'
-import { ThemeToggle } from './theme-toggle'
-import { LanguageToggle } from './language-toggle'
-import { AIAnalysisSection } from './ai-analysis/ai-analysis-section'
+import { useState } from "react"
+import Image from "next/image"
+import { Download, Menu } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { useToast } from "@/components/ui/use-toast"
+import { useLanguage } from "@/contexts/language-context"
+import { Sidebar } from "./sidebar"
+import { MapView } from "./map-view"
+import { NDVIChart } from "./ndvi-chart"
+import { SummaryCards } from "./summary-cards"
+import { DesertificationComparison } from "./desertification-comparison"
+import { SPIChart } from "./spi-chart"
+import { SoilErosionTable } from "./soil-erosion-table"
+import { TreeMonitoring } from "./tree-monitoring"
+import { ThemeToggle } from "./theme-toggle"
+import { LanguageToggle } from "./language-toggle"
+import { AIAnalysisSection } from "./ai-analysis/ai-analysis-section"
 
 export default function Dashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true)
@@ -38,15 +31,15 @@ export default function Dashboard() {
 
   const handleExportPDF = () => {
     toast({
-      title: t('dashboard.exportStarted'),
-      description: t('dashboard.exportStartedDesc'),
+      title: t("dashboard.exportStarted"),
+      description: t("dashboard.exportStartedDesc"),
     })
 
     // In a real implementation, this would trigger the PDF export
     setTimeout(() => {
       toast({
-        title: t('dashboard.exportComplete'),
-        description: t('dashboard.exportCompleteDesc'),
+        title: t("dashboard.exportComplete"),
+        description: t("dashboard.exportCompleteDesc"),
       })
     }, 2000)
   }
@@ -57,13 +50,7 @@ export default function Dashboard() {
 
       <div
         className={`flex-1 transition-all duration-300 ${
-          language === 'ar'
-            ? isSidebarOpen
-              ? 'md:mr-64'
-              : 'mr-0'
-            : isSidebarOpen
-            ? 'md:ml-64'
-            : 'ml-0'
+          language === "ar" ? (isSidebarOpen ? "md:mr-64" : "mr-0") : isSidebarOpen ? "md:ml-64" : "ml-0"
         }`}
       >
         <header className="bg-white dark:bg-gray-800 border-b border-green-100 dark:border-gray-700 p-4 flex justify-between items-center sticky top-0 z-10">
@@ -72,28 +59,20 @@ export default function Dashboard() {
               variant="ghost"
               size="icon"
               onClick={toggleSidebar}
-              className={`${
-                language === 'ar' ? 'ml-2' : 'mr-2'
-              } text-green-700 dark:text-green-400`}
+              className={`${language === "ar" ? "ml-2" : "mr-2"} text-green-700 dark:text-green-400`}
             >
               <Menu className="h-5 w-5" />
             </Button>
             <div className="flex items-center">
-              <div
-                className={`relative h-8 w-8 ${
-                  language === 'ar' ? 'ml-2' : 'mr-2'
-                } hidden sm:block`}
-              >
+              <div className={`relative h-8 w-8 ${language === "ar" ? "ml-2" : "mr-2"} hidden sm:block`}>
                 <Image
                   src="/images/logo.png"
-                  alt={language === 'ar' ? 'شعار إي-تريك' : 'E-Trek Logo'}
+                  alt={language === "ar" ? "شعار إي-تريك" : "E-Trek Logo"}
                   fill
                   className="object-contain"
                 />
               </div>
-              <h1 className="text-xl font-bold text-green-800 dark:text-green-400">
-                {t('dashboard.title')}
-              </h1>
+              <h1 className="text-xl font-bold text-green-800 dark:text-green-400">{t("dashboard.title")}</h1>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -103,10 +82,7 @@ export default function Dashboard() {
               onClick={handleExportPDF}
               className="bg-green-700 hover:bg-green-800 dark:bg-green-700 dark:hover:bg-green-600"
             >
-              <Download
-                className={`${language === 'ar' ? 'ml-2' : 'mr-2'} h-4 w-4`}
-              />{' '}
-              {t('dashboard.exportPdf')}
+              <Download className={`${language === "ar" ? "ml-2" : "mr-2"} h-4 w-4`} /> {t("dashboard.exportPdf")}
             </Button>
           </div>
         </header>
@@ -123,12 +99,8 @@ export default function Dashboard() {
             <Card className="dark:bg-gray-800 dark:border-gray-700">
               <CardContent className="p-0">
                 <div className="p-4 border-b border-green-100 dark:border-gray-700">
-                  <h2 className="text-lg font-semibold text-green-800 dark:text-green-400">
-                    {t('map.title')}
-                  </h2>
-                  <p className="text-sm text-green-600 dark:text-green-500">
-                    {t('map.subtitle')}
-                  </p>
+                  <h2 className="text-lg font-semibold text-green-800 dark:text-green-400">{t("map.title")}</h2>
+                  <p className="text-sm text-green-600 dark:text-green-500">{t("map.subtitle")}</p>
                 </div>
                 <div className="h-[400px] w-full">
                   <MapView />
@@ -139,12 +111,8 @@ export default function Dashboard() {
             <Card className="dark:bg-gray-800 dark:border-gray-700">
               <CardContent className="p-0">
                 <div className="p-4 border-b border-green-100 dark:border-gray-700">
-                  <h2 className="text-lg font-semibold text-green-800 dark:text-green-400">
-                    {t('ndvi.title')}
-                  </h2>
-                  <p className="text-sm text-green-600 dark:text-green-500">
-                    {t('ndvi.subtitle')}
-                  </p>
+                  <h2 className="text-lg font-semibold text-green-800 dark:text-green-400">{t("ndvi.title")}</h2>
+                  <p className="text-sm text-green-600 dark:text-green-500">{t("ndvi.subtitle")}</p>
                 </div>
                 <div className="p-4 h-[400px]">
                   <NDVIChart />
@@ -158,23 +126,13 @@ export default function Dashboard() {
               <Tabs defaultValue="desertification">
                 <div className="p-4 border-b border-green-100 dark:border-gray-700 flex justify-between items-center">
                   <div>
-                    <h2 className="text-lg font-semibold text-green-800 dark:text-green-400">
-                      {t('env.title')}
-                    </h2>
-                    <p className="text-sm text-green-600 dark:text-green-500">
-                      {t('env.subtitle')}
-                    </p>
+                    <h2 className="text-lg font-semibold text-green-800 dark:text-green-400">{t("env.title")}</h2>
+                    <p className="text-sm text-green-600 dark:text-green-500">{t("env.subtitle")}</p>
                   </div>
                   <TabsList className="bg-green-100 dark:bg-gray-700">
-                    <TabsTrigger value="desertification">
-                      {t('env.desertification')}
-                    </TabsTrigger>
-                    <TabsTrigger value="drought">
-                      {t('env.droughtIndex')}
-                    </TabsTrigger>
-                    <TabsTrigger value="erosion">
-                      {t('env.soilErosion')}
-                    </TabsTrigger>
+                    <TabsTrigger value="desertification">{t("env.desertification")}</TabsTrigger>
+                    <TabsTrigger value="drought">{t("env.droughtIndex")}</TabsTrigger>
+                    <TabsTrigger value="erosion">{t("env.soilErosion")}</TabsTrigger>
                   </TabsList>
                 </div>
 
@@ -196,12 +154,8 @@ export default function Dashboard() {
           <Card className="mb-6 dark:bg-gray-800 dark:border-gray-700">
             <CardContent className="p-0">
               <div className="p-4 border-b border-green-100 dark:border-gray-700">
-                <h2 className="text-lg font-semibold text-green-800 dark:text-green-400">
-                  {t('tree.title')}
-                </h2>
-                <p className="text-sm text-green-600 dark:text-green-500">
-                  {t('tree.subtitle')}
-                </p>
+                <h2 className="text-lg font-semibold text-green-800 dark:text-green-400">{t("tree.title")}</h2>
+                <p className="text-sm text-green-600 dark:text-green-500">{t("tree.subtitle")}</p>
               </div>
               <div className="p-4">
                 <TreeMonitoring />

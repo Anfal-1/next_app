@@ -2,16 +2,6 @@
 
 import dynamic from 'next/dynamic'
 
-const MapView = dynamic(() => import('./map-view'), { ssr: false })
-const NDVIChart = dynamic(() => import('./ndvi-chart'), { ssr: false })
-const SPIChart = dynamic(() => import('./spi-chart'), { ssr: false })
-const SoilErosionTable = dynamic(() => import('./soil-erosion-table'), {
-  ssr: false,
-})
-const TreeMonitoring = dynamic(() => import('./tree-monitoring'), {
-  ssr: false,
-})
-
 import { useState } from 'react'
 import Image from 'next/image'
 import { Download, Menu } from 'lucide-react'

@@ -1,17 +1,6 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-
-const MapView = dynamic(() => import('./map-view'), { ssr: false })
-const NDVIChart = dynamic(() => import('./ndvi-chart'), { ssr: false })
-const SPIChart = dynamic(() => import('./spi-chart'), { ssr: false })
-const SoilErosionTable = dynamic(() => import('./soil-erosion-table'), {
-  ssr: false,
-})
-const TreeMonitoring = dynamic(() => import('./tree-monitoring'), {
-  ssr: false,
-})
-
 import { useState } from 'react'
 import Image from 'next/image'
 import { Download, Menu } from 'lucide-react'
@@ -21,8 +10,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useToast } from '@/components/ui/use-toast'
 import { useLanguage } from '@/contexts/language-context'
 import { Sidebar } from './sidebar'
+import { MapView } from './map-view'
+import { NDVIChart } from './ndvi-chart'
 import { SummaryCards } from './summary-cards'
 import { DesertificationComparison } from './desertification-comparison'
+import { SPIChart } from './spi-chart'
+import { SoilErosionTable } from './soil-erosion-table'
+import { TreeMonitoring } from './tree-monitoring'
 import { ThemeToggle } from './theme-toggle'
 import { LanguageToggle } from './language-toggle'
 import { AIAnalysisSection } from './ai-analysis/ai-analysis-section'

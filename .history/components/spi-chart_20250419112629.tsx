@@ -10,9 +10,10 @@ import {
   Legend,
   ResponsiveContainer,
   ReferenceLine,
+  Cell,
 } from 'recharts'
 
-// Mock data for SPI (Standardized Precipitation Index) values
+// بيانات SPI
 const spiData = [
   { month: 'يناير', spi: -0.8 },
   { month: 'فبراير', spi: -1.2 },
@@ -28,19 +29,18 @@ const spiData = [
   { month: 'ديسمبر', spi: -0.7 },
 ]
 
-// Helper function to determine bar color based on SPI value
 const getBarColor = (spi: number) => {
-  if (spi <= -2) return '#D32F2F' // Extreme drought
-  if (spi <= -1.5) return '#F57C00' // Severe drought
-  if (spi <= -1) return '#FFA000' // Moderate drought
-  if (spi < 0) return '#FFD54F' // Mild drought
-  if (spi >= 2) return '#1B5E20' // Extremely wet
-  if (spi >= 1.5) return '#2E7D32' // Very wet
-  if (spi >= 1) return '#388E3C' // Moderately wet
-  return '#81C784' // Near normal
+  if (spi <= -2) return '#D32F2F'
+  if (spi <= -1.5) return '#F57C00'
+  if (spi <= -1) return '#FFA000'
+  if (spi < 0) return '#FFD54F'
+  if (spi >= 2) return '#1B5E20'
+  if (spi >= 1.5) return '#2E7D32'
+  if (spi >= 1) return '#388E3C'
+  return '#81C784'
 }
 
-export function SPIChart() {
+function SPIChart() {
   return (
     <div className="h-[400px] w-full">
       <div className="mb-4">
@@ -48,8 +48,8 @@ export function SPIChart() {
           مؤشر هطول الأمطار القياسي (SPI)
         </h3>
         <p className="text-sm text-green-600">
-          يقيس ظروف الجفاف: القيم السالبة تشير إلى الجفاف، والقيم الموجبة تشير
-          إلى ظروف رطبة
+          يقيس ظروف الجفاف: القيم السالبة تشير إلى الجفاف، والموجبة تشير إلى
+          ظروف رطبة
         </p>
       </div>
 
@@ -101,16 +101,9 @@ export function SPIChart() {
           <ReferenceLine y={-1} stroke="#FFA000" strokeDasharray="3 3" />
           <ReferenceLine y={-1.5} stroke="#F57C00" strokeDasharray="3 3" />
           <ReferenceLine y={-2} stroke="#D32F2F" strokeDasharray="3 3" />
-          <Bar
-            dataKey="spi"
-            name="قيمة SPI"
-            fill="#81C784"
-            radius={[4, 4, 0, 0]}
-            isAnimationActive={true}
-            animationDuration={1000}
-          >
+          <Bar dataKey="spi" name="قيمة SPI" radius={[4, 4, 0, 0]}>
             {spiData.map((entry, index) => (
-              <rect key={`rect-${index}`} fill={getBarColor(entry.spi)} />
+              <Cell key={`cell-${index}`} fill={getBarColor(entry.spi)} />
             ))}
           </Bar>
         </BarChart>

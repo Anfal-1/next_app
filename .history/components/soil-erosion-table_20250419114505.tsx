@@ -207,5 +207,3 @@ export function SoilErosionTable() {
     </div>
   )
 }
-
-export default SoilErosionTable

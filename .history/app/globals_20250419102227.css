@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Cairo';
-  src: url('/fonts/Cairo-VariableFont_slnt,wght.ttf') format('truetype');
+  src: url('/fonts/Cairo/Cairo-VariableFont_slnt,wght.ttf') format('truetype');
   font-display: swap;
 }
 @tailwind base;
