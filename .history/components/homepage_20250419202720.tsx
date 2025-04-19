@@ -197,7 +197,7 @@ export function Homepage() {
                   </div>
                   <div className="relative h-48 rounded-lg overflow-hidden">
                     <Image
-                      src="./images/feature2.jpg?height=200&width=300"
+                      src="/placeholder.svg?height=200&width=300"
                       alt="Al-Qassim Agriculture"
                       fill
                       className="object-cover"
@@ -205,7 +205,7 @@ export function Homepage() {
                   </div>
                   <div className="relative h-48 rounded-lg overflow-hidden">
                     <Image
-                      src="./images/feature3.jpg?height=200&width=300"
+                      src="/placeholder.svg?height=200&width=300"
                       alt="Al-Qassim Desert"
                       fill
                       className="object-cover"
@@ -213,7 +213,7 @@ export function Homepage() {
                   </div>
                   <div className="relative h-48 rounded-lg overflow-hidden">
                     <Image
-                      src="./images/feature4.jpg?height=200&width=300"
+                      src="/placeholder.svg?height=200&width=300"
                       alt="Al-Qassim City"
                       fill
                       className="object-cover"

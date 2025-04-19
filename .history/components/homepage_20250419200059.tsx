@@ -76,7 +76,7 @@ export function Homepage() {
               >
                 <div className="relative h-[300px] md:h-[400px] w-full rounded-lg overflow-hidden shadow-xl">
                   <Image
-                    src=".\images\homeimage1.jpg?height=400&width=600"
+                    src="\public\images\homeimage1.jpg?height=400&width=600"
                     alt="E-Trek Dashboard Preview"
                     fill
                     className="object-cover"
@@ -189,7 +189,7 @@ export function Homepage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="relative h-48 rounded-lg overflow-hidden">
                     <Image
-                      src="./images/feature1.jpg?height=200&width=300"
+                      src="/placeholder.svg?height=200&width=300"
                       alt="Al-Qassim Landscape"
                       fill
                       className="object-cover"
@@ -197,7 +197,7 @@ export function Homepage() {
                   </div>
                   <div className="relative h-48 rounded-lg overflow-hidden">
                     <Image
-                      src="./images/feature2.jpg?height=200&width=300"
+                      src="/placeholder.svg?height=200&width=300"
                       alt="Al-Qassim Agriculture"
                       fill
                       className="object-cover"
@@ -205,7 +205,7 @@ export function Homepage() {
                   </div>
                   <div className="relative h-48 rounded-lg overflow-hidden">
                     <Image
-                      src="./images/feature3.jpg?height=200&width=300"
+                      src="/placeholder.svg?height=200&width=300"
                       alt="Al-Qassim Desert"
                       fill
                       className="object-cover"
@@ -213,7 +213,7 @@ export function Homepage() {
                   </div>
                   <div className="relative h-48 rounded-lg overflow-hidden">
                     <Image
-                      src="./images/feature4.jpg?height=200&width=300"
+                      src="/placeholder.svg?height=200&width=300"
                       alt="Al-Qassim City"
                       fill
                       className="object-cover"
