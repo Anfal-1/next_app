@@ -2,7 +2,6 @@
 
 import type React from 'react'
 import { createContext, useContext, useState, useEffect } from 'react'
-import { translations } from '@/translations' // تأكد من المسار
 
 type Language = 'ar' | 'en'
 
@@ -19,6 +18,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>('ar')
 
+  // Set the document direction based on language
   useEffect(() => {
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr'
     document.documentElement.lang = language
@@ -29,13 +29,15 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('language', newLanguage)
   }
 
+  // Load language preference from localStorage on initial render
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language') as Language
-    if (savedLanguage === 'ar' || savedLanguage === 'en') {
+    if (savedLanguage && (savedLanguage === 'ar' || savedLanguage === 'en')) {
       setLanguageState(savedLanguage)
     }
   }, [])
 
+  // Translation function
   const t = (key: string): string => {
     return translations[language]?.[key] ?? key
   }
@@ -49,7 +51,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
 export function useLanguage() {
   const context = useContext(LanguageContext)
-  if (!context) {
+  if (context === undefined) {
     throw new Error('useLanguage must be used within a LanguageProvider')
   }
   return context

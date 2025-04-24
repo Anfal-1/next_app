@@ -2,7 +2,7 @@
 
 import type React from 'react'
 import { createContext, useContext, useState, useEffect } from 'react'
-import { translations } from '@/translations' // تأكد من المسار
+import { translations } from '../translations' // تأكد من المسار
 
 type Language = 'ar' | 'en'
 
