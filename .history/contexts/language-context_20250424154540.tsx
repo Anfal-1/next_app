@@ -161,10 +161,10 @@ const translations = {
     'tree.listView': 'عرض القائمة',
     'tree.afforestedAreas': 'مناطق التشجير',
     'tree.monitoringSites': 'مواقع المراقبة',
-    'tree.trees': 'الأشجار',
+    'tree.treess': 'الأشجار',
     'tree.health': 'الصحة',
     'tree.coverage': 'التغطية',
-    'tree.treesPlanted': 'الأشجار المزروعة',
+    'tree.treesPlantedd': 'الأشجار المزروعة',
     'tree.healthStatus': 'حالة الصحة',
     'tree.species': 'الأنواع',
     'tree.lastInspection': 'آخر فحص',
@@ -509,10 +509,10 @@ const translations = {
     'tree.listView': 'List View',
     'tree.afforestedAreas': 'Afforested Areas',
     'tree.monitoringSites': 'Monitoring Sites',
-    'tree.trees': 'Trees',
+    'tree.treess': 'Trees',
     'tree.health': 'Health',
     'tree.coverage': 'Coverage',
-    'tree.treesPlanted': 'Trees Planted',
+    'tree.treesPlantedd': 'Trees Planted',
     'tree.healthStatus': 'Health Status',
     'tree.species': 'Species',
     'tree.lastInspection': 'Last Inspection',
@@ -738,7 +738,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   // Translation function
   const t = (key: string): string => {
-    return translations[language]?.[key] ?? key
+    return translations[language][key] || key
   }
 
   return (

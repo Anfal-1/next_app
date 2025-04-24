@@ -15,7 +15,7 @@ const securityHeaders = [
       default-src 'self';
       script-src 'self' 'unsafe-inline' 'unsafe-eval';
       style-src 'self' 'unsafe-inline';
-      img-src 'self' data: https://*.tile.openstreetmap.org;
+      img-src 'self' data:;
       frame-src 'self' https://ee-anfalalharbi826.projects.earthengine.app/view/e-analysis;
       child-src 'self' https://ee-anfalalharbi826.projects.earthengine.app/view/e-analysis;
       connect-src 'self';
