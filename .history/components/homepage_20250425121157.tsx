@@ -32,25 +32,22 @@ export function Homepage() {
 
       <main className="flex-1">
         <section className="bg-white py-16 px-6">
-          <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-6">
+          <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-10 flex-wrap">
             {/* النص يسار */}
-            <div className="lg:w-1/2 text-center ">
-              <h1 className="text-4xl font-bold text-#a2361e-900 mb-4">
-                E-Trek
-              </h1>
+            <div className="w-full md:w-1/2 text-center md:text-right">
+              <h1 className="text-4xl font-bold text-[#a2361e] mb-4">E-Trek</h1>
               <p className="text-2xl mb-6 text-gray-800">
-                {t('home.hero.title')}
+                نحو مستقبل أكثر استدامة
               </p>
-              <button className="bg-amber-900 text-white py-2 px-6 rounded hover:bg-amber-800 transition">
-                <Link href="/faq">{t('home.hero.learnMoreBtn')}</Link>{' '}
+              <button className="bg-[#a2361e] text-white py-2 px-6 rounded hover:bg-[#8e2e18] transition">
+                <Link href="/faq">{t('home.hero.learnMoreBtn')}</Link>
               </button>
             </div>
 
             {/* الصورة يمين */}
-            <div className="lg:w-1/2 flex justify-center relative">
-              {/* الصورة */}
+            <div className="w-full md:w-1/2 flex justify-center relative">
               <Image
-                src="\homeimage1.jpg" // استبدل بالمسار الصحيح
+                src="/homeimage1.jpg" // استبدل بالمسار الصحيح
                 alt="E-Trek cover"
                 width={300}
                 height={300}

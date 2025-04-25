@@ -31,34 +31,6 @@ export function Homepage() {
       <Navbar />
 
       <main className="flex-1">
-        <section className="bg-white py-16 px-6">
-          <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-6">
-            {/* النص يسار */}
-            <div className="lg:w-1/2 text-center ">
-              <h1 className="text-4xl font-bold text-#a2361e-900 mb-4">
-                E-Trek
-              </h1>
-              <p className="text-2xl mb-6 text-gray-800">
-                {t('home.hero.title')}
-              </p>
-              <button className="bg-amber-900 text-white py-2 px-6 rounded hover:bg-amber-800 transition">
-                <Link href="/faq">{t('home.hero.learnMoreBtn')}</Link>{' '}
-              </button>
-            </div>
-
-            {/* الصورة يمين */}
-            <div className="lg:w-1/2 flex justify-center relative">
-              {/* الصورة */}
-              <Image
-                src="\homeimage1.jpg" // استبدل بالمسار الصحيح
-                alt="E-Trek cover"
-                width={300}
-                height={300}
-                className="relative z-10 rounded shadow"
-              />
-            </div>
-          </div>
-        </section>
         <section className="relative w-full h-[600px]">
           {/* الصورة تغطي كامل العرض والارتفاع */}
           <Image
@@ -71,8 +43,12 @@ export function Homepage() {
 
           {/* النص فوق الصورة */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 bg-black/50">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-            <p className="text-lg text-white max-w-3xl mb-6"></p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              {t('home.cta.title')}
+            </h2>
+            <p className="text-lg text-white max-w-3xl mb-6">
+              {t('home.cta.description')}
+            </p>
             <div className="flex justify-center gap-4 flex-wrap">
               {/* Explore Dashboard */}
               <Button
@@ -81,6 +57,15 @@ export function Homepage() {
                 className="bg-transparent border border-white text-white hover:bg-white/10 transition"
               >
                 <Link href="/dashboard">{t('home.hero.dashboardBtn')}</Link>
+              </Button>
+
+              {/* Learn More */}
+              <Button
+                asChild
+                size="lg"
+                className="bg-transparent border border-white text-white hover:bg-white/10 transition"
+              >
+                <Link href="#features">{t('home.hero.learnMoreBtn')}</Link>
               </Button>
             </div>
           </div>
@@ -245,9 +230,10 @@ export function Homepage() {
 interface FeatureCardProps {
   icon: React.ReactNode
   title: string
+  description: string
 }
 
-function FeatureCard({ icon, title }: FeatureCardProps) {
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <Card className="border-green-100 dark:border-gray-700">
       <CardHeader>
@@ -257,7 +243,9 @@ function FeatureCard({ icon, title }: FeatureCardProps) {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription className="text-gray-600 dark:text-gray-300"></CardDescription>
+        <CardDescription className="text-gray-600 dark:text-gray-300">
+          {description}
+        </CardDescription>
       </CardContent>
     </Card>
   )

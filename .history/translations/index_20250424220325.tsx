@@ -19,7 +19,7 @@ export const translations = {
     'nav.faq': 'الأسئلة الشائعة',
 
     // Homepage
-    'home.hero.title': ' نحو مستقبل أكثر استدامة',
+    'home.hero.title': 'إي-تريك: المراقبة البيئية الذكية ',
     'home.hero.dashboardBtn': 'استكشف لوحة المعلومات',
     'home.hero.learnMoreBtn': 'تعرف على المزيد',
 
@@ -358,7 +358,7 @@ export const translations = {
     'nav.faq': 'FAQ',
 
     // Homepage
-    'home.hero.title': ' Building a more sustainable future',
+    'home.hero.title': 'E-Trek: Smart Environmental Monitoring',
 
     'home.hero.dashboardBtn': 'Explore Dashboard',
     'home.hero.learnMoreBtn': 'Learn More',
@@ -376,16 +376,24 @@ export const translations = {
       'Comprehensive analysis of environmental data using the latest technologies and statistical models to extract valuable insights.',
 
     'home.features.cards.conservation.title': 'Natural Resource Protection',
+    'home.features.cards.conservation.description':
+      'Support conservation efforts by providing accurate data and key performance indicators.',
 
     'home.features.cards.risk.title': 'Environmental Risk Assessment',
+    'home.features.cards.risk.description':
+      'Identify and assess potential environmental risks such as desertification, drought, and land degradation.',
 
     'home.features.cards.mapping.title': 'Advanced Interactive Maps',
+    'home.features.cards.mapping.description':
+      'Display environmental data on advanced interactive maps allowing for spatial and temporal analysis.',
 
     'home.features.cards.ai.title': 'AI-Powered Analysis',
+    'home.features.cards.ai.description':
+      'Use artificial intelligence and computer vision techniques to analyze satellite and drone imagery.',
 
     'home.cta.title': 'Start Your Journey with E-Trek Today',
     'home.cta.description':
-      ' discover how advanced environmental data can help make better decisions and protect the environment ',
+      'Explore the E-Trek dashboard and discover how advanced environmental data can help make better decisions and protect the environment ',
     'home.cta.button': 'Explore Dashboard',
 
     // Footer

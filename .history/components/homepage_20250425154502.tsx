@@ -32,7 +32,7 @@ export function Homepage() {
 
       <main className="flex-1">
         <section className="bg-white py-16 px-6">
-          <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-6">
+          <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
             {/* النص يسار */}
             <div className="lg:w-1/2 text-center ">
               <h1 className="text-4xl font-bold text-#a2361e-900 mb-4">

@@ -19,7 +19,7 @@ export const translations = {
     'nav.faq': 'الأسئلة الشائعة',
 
     // Homepage
-    'home.hero.title': ' نحو مستقبل أكثر استدامة',
+    'home.hero.title': 'إي-تريك: المراقبة البيئية الذكية ',
     'home.hero.dashboardBtn': 'استكشف لوحة المعلومات',
     'home.hero.learnMoreBtn': 'تعرف على المزيد',
 
@@ -358,7 +358,7 @@ export const translations = {
     'nav.faq': 'FAQ',
 
     // Homepage
-    'home.hero.title': ' Building a more sustainable future',
+    'home.hero.title': '',
 
     'home.hero.dashboardBtn': 'Explore Dashboard',
     'home.hero.learnMoreBtn': 'Learn More',

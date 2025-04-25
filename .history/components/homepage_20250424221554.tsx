@@ -31,34 +31,6 @@ export function Homepage() {
       <Navbar />
 
       <main className="flex-1">
-        <section className="bg-white py-16 px-6">
-          <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-6">
-            {/* النص يسار */}
-            <div className="lg:w-1/2 text-center ">
-              <h1 className="text-4xl font-bold text-#a2361e-900 mb-4">
-                E-Trek
-              </h1>
-              <p className="text-2xl mb-6 text-gray-800">
-                {t('home.hero.title')}
-              </p>
-              <button className="bg-amber-900 text-white py-2 px-6 rounded hover:bg-amber-800 transition">
-                <Link href="/faq">{t('home.hero.learnMoreBtn')}</Link>{' '}
-              </button>
-            </div>
-
-            {/* الصورة يمين */}
-            <div className="lg:w-1/2 flex justify-center relative">
-              {/* الصورة */}
-              <Image
-                src="\homeimage1.jpg" // استبدل بالمسار الصحيح
-                alt="E-Trek cover"
-                width={300}
-                height={300}
-                className="relative z-10 rounded shadow"
-              />
-            </div>
-          </div>
-        </section>
         <section className="relative w-full h-[600px]">
           {/* الصورة تغطي كامل العرض والارتفاع */}
           <Image
@@ -81,6 +53,15 @@ export function Homepage() {
                 className="bg-transparent border border-white text-white hover:bg-white/10 transition"
               >
                 <Link href="/dashboard">{t('home.hero.dashboardBtn')}</Link>
+              </Button>
+
+              {/* Learn More */}
+              <Button
+                asChild
+                size="lg"
+                className="bg-transparent border border-white text-white hover:bg-white/10 transition"
+              >
+                <Link href="/faq">{t('home.hero.learnMoreBtn')}</Link>
               </Button>
             </div>
           </div>
