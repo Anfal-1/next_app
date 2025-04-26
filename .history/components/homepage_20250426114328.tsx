@@ -53,7 +53,7 @@ export function Homepage() {
                 alt="E-Trek cover"
                 width={180}
                 height={180}
-                className="rounded-md select-none pointer-events-none"
+                className="rounded-md"
               />
             </div>
           </div>
@@ -68,7 +68,7 @@ export function Homepage() {
               alt="ميزة 1"
               width={500}
               height={200}
-              className="w-full h-auto object-cover select-none pointer-events-none"
+              className="w-full h-auto object-cover"
             />
           </div>
         </section>
@@ -85,7 +85,7 @@ export function Homepage() {
               alt="ميزة 1"
               width={500}
               height={200}
-              className="w-full h-auto object-cover select-none pointer-events-none"
+              className="w-full h-auto object-cover"
             />
           </div>
         </section>
@@ -103,28 +103,28 @@ export function Homepage() {
               alt="ميزة 1"
               width={500}
               height={200}
-              className="w-full h-auto object-cover select-none pointer-events-none"
+              className="w-full h-auto object-cover"
             />
             <Image
               src="/images/Feature22.jpg"
               alt="ميزة 2"
               width={1200}
               height={500}
-              className="w-full h-auto object-cover select-none pointer-events-none"
+              className="w-full h-auto object-cover"
             />
             <Image
               src="/images/Feature33.jpg"
               alt="ميزة 3"
               width={1200}
               height={500}
-              className="w-full h-auto object-cover select-none pointer-events-none"
+              className="w-full h-auto object-cover"
             />
             <Image
               src="/images/Feature44.jpg"
               alt="ميزة 4"
               width={1200}
               height={500}
-              className="w-full h-auto object-cover select-none pointer-events-none"
+              className="w-full h-auto object-cover"
             />
           </div>
         </section>
