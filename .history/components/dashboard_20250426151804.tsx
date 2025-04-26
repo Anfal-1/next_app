@@ -29,10 +29,6 @@ const TreeMonitoring = dynamic(() => import('@/components/tree-monitoring'), {
   ssr: false,
 })
 
-const HFEmbed = dynamic(() => import('@/components/ai-analysis/HFEmbed'), {
-  ssr: false,
-})
-
 export default function Dashboard() {
   const { toast } = useToast()
   const { language, t } = useLanguage()
@@ -75,7 +71,6 @@ export default function Dashboard() {
         </header>
 
         <main className="p-4 md:p-6 overflow-auto h-[calc(100vh-64px)]">
-          <HFEmbed />
           {/* التحليل الذكي أول شيء */}
           <AIAnalysisSection />
 
@@ -184,6 +179,26 @@ export default function Dashboard() {
               </div>
             </CardContent>
           </Card>
+          <section className="bg-white py-20 px-6">
+            <div className="max-w-7xl mx-auto text-center">
+              <h2 className="text-2xl font-bold mb-6 text-[#5C4033]">
+                تحليل الأشجار بالذكاء الاصطناعي
+              </h2>
+              <p className="text-gray-600 mb-8">
+                استخدم أداة MaskFormer لتحديد الأشجار من صور الأقمار الصناعية
+                مباشرة عبر الموقع.
+              </p>
+              <div className="w-full h-[700px]">
+                <iframe
+                  src="https://huggingface.co/spaces/thiagohersan/maskformer-satellite-trees-gradio"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 'none' }}
+                  allow="clipboard-write; clipboard-read; camera; microphone"
+                ></iframe>
+              </div>
+            </div>
+          </section>
         </main>
       </div>
     </div>

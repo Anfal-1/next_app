@@ -75,7 +75,6 @@ export default function Dashboard() {
         </header>
 
         <main className="p-4 md:p-6 overflow-auto h-[calc(100vh-64px)]">
-          <HFEmbed />
           {/* التحليل الذكي أول شيء */}
           <AIAnalysisSection />
 

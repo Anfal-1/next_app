@@ -29,10 +29,6 @@ const TreeMonitoring = dynamic(() => import('@/components/tree-monitoring'), {
   ssr: false,
 })
 
-const HFEmbed = dynamic(() => import('@/components/ai-analysis/HFEmbed'), {
-  ssr: false,
-})
-
 export default function Dashboard() {
   const { toast } = useToast()
   const { language, t } = useLanguage()
@@ -75,23 +71,10 @@ export default function Dashboard() {
         </header>
 
         <main className="p-4 md:p-6 overflow-auto h-[calc(100vh-64px)]">
-          <HFEmbed />
           {/* التحليل الذكي أول شيء */}
           <AIAnalysisSection />
 
-          <Card className="mb-6 dark:bg-gray-800 dark:border-gray-700">
-            <div className="p-4 border-b border-green-100 dark:border-gray-700"></div>
-            <div className="p-4">
-              <iframe
-                src="https://ee-anfalalharbi826.projects.earthengine.app/view/e-analysis"
-                width="100%"
-                height="500"
-                style={{ border: 'none' }}
-                loading="lazy"
-              />
-            </div>
-          </Card>
-          <div className="grid grid-cols-3 md:grid-cols-3 gap-6 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <SummaryCards />
           </div>
 
@@ -183,6 +166,18 @@ export default function Dashboard() {
                 <TreeMonitoring />
               </div>
             </CardContent>
+          </Card>
+          <Card className="mb-6 dark:bg-gray-800 dark:border-gray-700">
+            <div className="p-4 border-b border-green-100 dark:border-gray-700"></div>
+            <div className="p-4">
+              <iframe
+                src="https://ee-anfalalharbi826.projects.earthengine.app/view/e-analysis"
+                width="100%"
+                height="500"
+                style={{ border: 'none' }}
+                loading="lazy"
+              />
+            </div>
           </Card>
         </main>
       </div>
