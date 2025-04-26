@@ -60,14 +60,13 @@ export function Homepage() {
           </div>
         </section>
 
-        <section className="bg-white py-20 px-6">
-          <div className="flex flex-col gap-10">
+        <section className=" py-16 px-6 bg-white">
+          <div className="w-full h-64 md:h-96 overflow-hidden">
             <Image
               src="/images/ai.jpg"
-              alt="ميزة 1"
-              width={500}
-              height={200}
-              className="w-full h-64 object-cover"
+              alt="صورة الذكاء الاصطناعي"
+              fill
+              className="object-cover"
             />
           </div>
         </section>

@@ -63,17 +63,6 @@ export function Homepage() {
         <section className="bg-white py-20 px-6">
           <div className="flex flex-col gap-10">
             <Image
-              src="/images/ai.jpg"
-              alt="ميزة 1"
-              width={500}
-              height={200}
-              className="w-full h-64 object-cover"
-            />
-          </div>
-        </section>
-        <section className="bg-white py-20 px-6">
-          <div className="flex flex-col gap-10">
-            <Image
               src="/images/Feature11.jpg"
               alt="ميزة 1"
               width={500}

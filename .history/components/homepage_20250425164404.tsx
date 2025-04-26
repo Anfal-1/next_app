@@ -31,8 +31,8 @@ export function Homepage() {
       <Navbar />
 
       <main className="flex-1">
-        <section className="bg-white py-40 px-6">
-          <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-1">
+        <section className="bg-white py-16 px-6">
+          <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-6">
             {/* النص يسار */}
             <div className="lg:w-1/2 text-center ">
               <h1 className="text-4xl font-bold text-#a2361e-900 mb-4">
@@ -50,63 +50,33 @@ export function Homepage() {
             <div className="lg:w-1/2 flex justify-center relative">
               {/* الصورة */}
               <Image
-                src="images\homeimage1.jpg" // استبدل بالمسار الصحيح
+                src="\homeimage1.jpg" // استبدل بالمسار الصحيح
                 alt="E-Trek cover"
                 width={300}
                 height={300}
-                className="relative z-10 "
+                className="relative z-10 rounded shadow"
               />
             </div>
           </div>
         </section>
+        <section
+          className="w-full h-[400px] bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              'url("/4B239C5D-EDC9-40CB-8CB0-20F42ADC379B.jpeg")',
+          }}
+        ></section>
+        <section
+          className="w-full h-[400px] bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: '/about.jpeg',
+          }}
+        ></section>
 
-        <section className="bg-white py-20 px-6">
-          <div className="flex flex-col gap-10">
-            <Image
-              src="/images/ai.jpg"
-              alt="ميزة 1"
-              width={500}
-              height={200}
-              className="w-full h-64 object-cover"
-            />
-          </div>
-        </section>
-        <section className="bg-white py-20 px-6">
-          <div className="flex flex-col gap-10">
-            <Image
-              src="/images/Feature11.jpg"
-              alt="ميزة 1"
-              width={500}
-              height={200}
-              className="w-full h-64 object-cover"
-            />
-            <Image
-              src="/images/Feature22.jpg"
-              alt="ميزة 2"
-              width={1200}
-              height={500}
-              className="w-full  h-64 object-cover"
-            />
-            <Image
-              src="/images/Feature33.jpg"
-              alt="ميزة 3"
-              width={1200}
-              height={500}
-              className="w-full  h-64 object-cover"
-            />
-            <Image
-              src="/images/Feature44.jpg"
-              alt="ميزة 4"
-              width={1200}
-              height={500}
-              className="w-full   h-64 object-cover"
-            />
-          </div>
-        </section>
         <section className="relative w-full h-[600px]">
           {/* الصورة تغطي كامل العرض والارتفاع */}
           <Image
-            src="images/laptop.png"
+            src="/laptop.png"
             alt="E-Trek Dashboard in Laptop Mockup"
             fill
             className="object-cover"
@@ -126,6 +96,55 @@ export function Homepage() {
               >
                 <Link href="/dashboard">{t('home.hero.dashboardBtn')}</Link>
               </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section id="features" className="py-20 bg-white dark:bg-gray-800">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                {t('home.features.subtitle')}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <FeatureCard
+                icon={
+                  <Globe className="h-10 w-10 text-green-600 dark:text-green-500" />
+                }
+                title={t('home.features.cards.monitoring.title')}
+              />
+              <FeatureCard
+                icon={
+                  <BarChart3 className="h-10 w-10 text-green-600 dark:text-green-500" />
+                }
+                title={t('home.features.cards.analysis.title')}
+              />
+              <FeatureCard
+                icon={
+                  <Leaf className="h-10 w-10 text-green-600 dark:text-green-500" />
+                }
+                title={t('home.features.cards.conservation.title')}
+              />
+              <FeatureCard
+                icon={
+                  <Shield className="h-10 w-10 text-green-600 dark:text-green-500" />
+                }
+                title={t('home.features.cards.risk.title')}
+              />
+              <FeatureCard
+                icon={
+                  <MapPin className="h-10 w-10 text-green-600 dark:text-green-500" />
+                }
+                title={t('home.features.cards.mapping.title')}
+              />
+              <FeatureCard
+                icon={
+                  <BarChart3 className="h-10 w-10 text-green-600 dark:text-green-500" />
+                }
+                title={t('home.features.cards.ai.title')}
+              />
             </div>
           </div>
         </section>
