@@ -35,7 +35,7 @@ export function Homepage() {
           <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-4">
             {/* النص */}
             <div className="w-1/2 text-center">
-              <h1 className="text-lg md:text-4xl font-bold text-[#5C4033] mb-4">
+              <h1 className="text-lg md:text-4xl font-bold text-[#a2361e] mb-4">
                 E-Trek
               </h1>
               <p className="text-xs md:text-2xl mb-6 text-gray-800">
@@ -61,7 +61,7 @@ export function Homepage() {
         <section className="bg-white py-20 px-6">
           <div className="flex flex-col gap-10">
             {/* عنوان السكشن الأول */}
-            <h2 className="text-1xl font-bold text-center text-[#5C4033] mb-8">
+            <h2 className="text-3xl font-bold text-center text-[#a2361e] mb-8">
               كيف E-Trek يستخدم الذكاء الإصطناعي لمكافحة التصحر
             </h2>
 
@@ -79,7 +79,7 @@ export function Homepage() {
         <section className="bg-white py-20 px-6">
           <div className="flex flex-col gap-10">
             {/* عنوان السكشن الثاني */}
-            <h2 className="text-1xl font-bold text-center text-[#5C4033] mb-8">
+            <h2 className="text-3xl font-bold text-center text-[#a2361e] mb-8">
               ماذا يميزنا
             </h2>
 

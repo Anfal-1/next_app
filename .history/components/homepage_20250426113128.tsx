@@ -31,37 +31,10 @@ export function Homepage() {
       <Navbar />
 
       <main className="flex-1">
-        <section className="bg-white py-20 px-4">
-          <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-4">
-            {/* النص */}
-            <div className="w-1/2 text-center">
-              <h1 className="text-lg md:text-4xl font-bold text-[#5C4033] mb-4">
-                E-Trek
-              </h1>
-              <p className="text-xs md:text-2xl mb-6 text-gray-800">
-                {t('home.hero.title')}
-              </p>
-              <button className="bg-amber-900 text-white text-xs md:text-base py-1 px-1 md:px-6 rounded hover:bg-amber-800 transition">
-                <Link href="/faq">{t('home.hero.learnMoreBtn')}</Link>
-              </button>
-            </div>
-
-            {/* الصورة */}
-            <div className="w-1/2 flex justify-center">
-              <Image
-                src="/images/homeimage1.jpg"
-                alt="E-Trek cover"
-                width={180}
-                height={180}
-                className="rounded-md"
-              />
-            </div>
-          </div>
-        </section>
         <section className="bg-white py-20 px-6">
           <div className="flex flex-col gap-10">
             {/* عنوان السكشن الأول */}
-            <h2 className="text-1xl font-bold text-center text-[#5C4033] mb-8">
+            <h2 className="text-xl md:text-3xl font-bold text-center text-[#5C4033] mb-8">
               كيف E-Trek يستخدم الذكاء الإصطناعي لمكافحة التصحر
             </h2>
 
@@ -79,7 +52,7 @@ export function Homepage() {
         <section className="bg-white py-20 px-6">
           <div className="flex flex-col gap-10">
             {/* عنوان السكشن الثاني */}
-            <h2 className="text-1xl font-bold text-center text-[#5C4033] mb-8">
+            <h2 className="text-xl md:text-3xl font-bold text-center text-[#5C4033] mb-8">
               ماذا يميزنا
             </h2>
 
@@ -114,6 +87,7 @@ export function Homepage() {
             />
           </div>
         </section>
+
         <section className="relative w-full h-[600px]">
           {/* الصورة تغطي كامل العرض والارتفاع */}
           <Image

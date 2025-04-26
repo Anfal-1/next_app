@@ -35,7 +35,7 @@ export function Homepage() {
           <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-4">
             {/* النص */}
             <div className="w-1/2 text-center">
-              <h1 className="text-lg md:text-4xl font-bold text-[#5C4033] mb-4">
+              <h1 className="text-lg md:text-4xl font-bold text-[#a2361e] mb-4">
                 E-Trek
               </h1>
               <p className="text-xs md:text-2xl mb-6 text-gray-800">
@@ -58,60 +58,115 @@ export function Homepage() {
             </div>
           </div>
         </section>
+
         <section className="bg-white py-20 px-6">
           <div className="flex flex-col gap-10">
-            {/* عنوان السكشن الأول */}
-            <h2 className="text-1xl font-bold text-center text-[#5C4033] mb-8">
-              كيف E-Trek يستخدم الذكاء الإصطناعي لمكافحة التصحر
-            </h2>
-
-            {/* الصورة */}
             <Image
               src="/images/ai.jpg"
               alt="ميزة 1"
               width={500}
               height={200}
-              className="w-full h-auto object-cover"
+              className="w-full h-64 object-cover"
+            />
+          </div>
+        </section>
+        <section className="bg-white py-20 px-6">
+          <div className="flex flex-col gap-10">
+            <Image
+              src="/images/ai.jpg"
+              alt="ميزة 1"
+              width={500}
+              height={200}
+              className="w-full h-40 md:h-64 object-cover"
             />
           </div>
         </section>
 
-        <section className="bg-white py-20 px-6">
-          <div className="flex flex-col gap-10">
-            {/* عنوان السكشن الثاني */}
-            <h2 className="text-1xl font-bold text-center text-[#5C4033] mb-8">
-              ماذا يميزنا
-            </h2>
+        <section className="bg-white py-20 px-6 space-y-20">
+          {/* العنصر الأول */}
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            {/* الصورة */}
+            <div className="w-full md:w-1/2">
+              <Image
+                src="/images/your-image-1.jpg"
+                alt="ميزة 1"
+                width={500}
+                height={500}
+                className="w-full h-64 object-cover rounded-md"
+              />
+            </div>
+            {/* النص */}
+            <div className="w-full md:w-1/2 text-center md:text-start">
+              <h2 className="text-2xl font-bold mb-4">الصناعية</h2>
+              <p className="text-gray-600 text-base">
+                وصف قصير عن ميزة الصناعية وكيف تستخدم التقنية لدعم الزراعة.
+              </p>
+            </div>
+          </div>
 
-            {/* الصور */}
-            <Image
-              src="/images/Feature11.jpg"
-              alt="ميزة 1"
-              width={500}
-              height={200}
-              className="w-full h-auto object-cover"
-            />
-            <Image
-              src="/images/Feature22.jpg"
-              alt="ميزة 2"
-              width={1200}
-              height={500}
-              className="w-full h-auto object-cover"
-            />
-            <Image
-              src="/images/Feature33.jpg"
-              alt="ميزة 3"
-              width={1200}
-              height={500}
-              className="w-full h-auto object-cover"
-            />
-            <Image
-              src="/images/Feature44.jpg"
-              alt="ميزة 4"
-              width={1200}
-              height={500}
-              className="w-full h-auto object-cover"
-            />
+          {/* العنصر الثاني */}
+          <div className="flex flex-col md:flex-row-reverse items-center gap-8">
+            {/* الصورة */}
+            <div className="w-full md:w-1/2">
+              <Image
+                src="/images/your-image-2.jpg"
+                alt="ميزة 2"
+                width={500}
+                height={500}
+                className="w-full h-64 object-cover rounded-md"
+              />
+            </div>
+            {/* النص */}
+            <div className="w-full md:w-1/2 text-center md:text-start">
+              <h2 className="text-2xl font-bold mb-4">عرض خريطة</h2>
+              <p className="text-gray-600 text-base">
+                وصف قصير عن عرض الخرائط وتحليل المناطق باستخدام الأقمار
+                الصناعية.
+              </p>
+            </div>
+          </div>
+
+          {/* العنصر الثالث */}
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            {/* الصورة */}
+            <div className="w-full md:w-1/2">
+              <Image
+                src="/images/your-image-3.jpg"
+                alt="ميزة 3"
+                width={500}
+                height={500}
+                className="w-full h-64 object-cover rounded-md"
+              />
+            </div>
+            {/* النص */}
+            <div className="w-full md:w-1/2 text-center md:text-start">
+              <h2 className="text-2xl font-bold mb-4">تحليل التربة</h2>
+              <p className="text-gray-600 text-base">
+                وصف قصير عن فائدة تحليل التربة للزراعة الذكية وتحقيق الاستدامة.
+              </p>
+            </div>
+          </div>
+
+          {/* العنصر الرابع */}
+          <div className="flex flex-col md:flex-row-reverse items-center gap-8">
+            {/* الصورة */}
+            <div className="w-full md:w-1/2">
+              <Image
+                src="/images/your-image-4.jpg"
+                alt="ميزة 4"
+                width={500}
+                height={500}
+                className="w-full h-64 object-cover rounded-md"
+              />
+            </div>
+            {/* النص */}
+            <div className="w-full md:w-1/2 text-center md:text-start">
+              <h2 className="text-2xl font-bold mb-4">مراقبة التشجير</h2>
+              <p className="text-gray-600 text-base">
+                وصف قصير عن مراقبة نمو الأشجار باستخدام الذكاء الاصطناعي وصور
+                الطائرات.
+              </p>
+            </div>
           </div>
         </section>
         <section className="relative w-full h-[600px]">

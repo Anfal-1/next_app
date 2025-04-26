@@ -35,13 +35,13 @@ export function Homepage() {
           <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-4">
             {/* النص */}
             <div className="w-1/2 text-center">
-              <h1 className="text-lg md:text-4xl font-bold text-[#5C4033] mb-4">
+              <h1 className="text-lg md:text-4xl font-bold text-[#a2361e] mb-4">
                 E-Trek
               </h1>
               <p className="text-xs md:text-2xl mb-6 text-gray-800">
                 {t('home.hero.title')}
               </p>
-              <button className="bg-amber-900 text-white text-xs md:text-base py-1 px-1 md:px-6 rounded hover:bg-amber-800 transition">
+              <button className="bg-amber-900 text-white text-xs md:text-base py-2 px-2 md:px-6 rounded hover:bg-amber-800 transition">
                 <Link href="/faq">{t('home.hero.learnMoreBtn')}</Link>
               </button>
             </div>
@@ -58,59 +58,47 @@ export function Homepage() {
             </div>
           </div>
         </section>
+
         <section className="bg-white py-20 px-6">
           <div className="flex flex-col gap-10">
-            {/* عنوان السكشن الأول */}
-            <h2 className="text-1xl font-bold text-center text-[#5C4033] mb-8">
-              كيف E-Trek يستخدم الذكاء الإصطناعي لمكافحة التصحر
-            </h2>
-
-            {/* الصورة */}
             <Image
               src="/images/ai.jpg"
               alt="ميزة 1"
               width={500}
               height={200}
-              className="w-full h-auto object-cover"
+              className="w-full h-64 object-cover"
             />
           </div>
         </section>
-
         <section className="bg-white py-20 px-6">
           <div className="flex flex-col gap-10">
-            {/* عنوان السكشن الثاني */}
-            <h2 className="text-1xl font-bold text-center text-[#5C4033] mb-8">
-              ماذا يميزنا
-            </h2>
-
-            {/* الصور */}
             <Image
               src="/images/Feature11.jpg"
               alt="ميزة 1"
               width={500}
               height={200}
-              className="w-full h-auto object-cover"
+              className="w-full h-64 object-cover"
             />
             <Image
               src="/images/Feature22.jpg"
               alt="ميزة 2"
               width={1200}
               height={500}
-              className="w-full h-auto object-cover"
+              className="w-full  h-64 object-cover"
             />
             <Image
               src="/images/Feature33.jpg"
               alt="ميزة 3"
               width={1200}
               height={500}
-              className="w-full h-auto object-cover"
+              className="w-full  h-64 object-cover"
             />
             <Image
               src="/images/Feature44.jpg"
               alt="ميزة 4"
               width={1200}
               height={500}
-              className="w-full h-auto object-cover"
+              className="w-full   h-64 object-cover"
             />
           </div>
         </section>
