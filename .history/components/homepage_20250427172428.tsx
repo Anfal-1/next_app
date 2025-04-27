@@ -40,17 +40,9 @@ const faqList = [
     value: 'faq-2',
   },
   {
-    question:
-      'ما الذي يجعل E-Trek مختلفًا عن الأنظمة الجغرافية البيئية الأخرى؟',
-    answer:
-      'E-Trek ليس مجرد نظام عرض خرائط، بل منصة تحليل ذكية تعتمد على الذكاء الاصطناعي لتفسير البيانات البيئية من الأقمار الصناعية والطائرات المسيّرة، وتقديم تنبؤات قابلة للتنفيذ.',
-    value: 'faq-3',
-  },
-  {
-    question: 'كيف يخدم المشروع الأهداف الوطنية مثل رؤية السعودية 2030؟',
-    answer:
-      'يدعم E-Trek مبادرة السعودية الخضراء عبر مراقبة مؤشرات التشجير والتصحر والغطاء النباتي بدقة، مما يساعد في اتخاذ قرارات مبنية على بيانات حقيقية لتحقيق أهداف الاستدامة.',
-    value: 'faq-4',
+    question: 
+    answer: 'نعم، يمكنك توليد تقارير ذكية بالعربية والإنجليزية.',
+    value: 'faq-2',
   },
 ]
 
@@ -73,7 +65,7 @@ export function Homepage() {
                 {t('home.hero.title')}
               </p>
               <button className="bg-amber-900 text-white text-xs md:text-base py-1 px-1 md:px-6 rounded hover:bg-amber-800 transition">
-                <Link href="/dashboard">إبدأ الآن</Link>
+                <Link href="/faq">{t('home.hero.learnMoreBtn')}</Link>
               </button>
             </div>
 

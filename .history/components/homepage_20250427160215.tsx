@@ -22,12 +22,6 @@ import {
 } from '@/components/ui/card'
 import { Navbar } from '@/components/shared/navbar'
 import { useLanguage } from '@/contexts/language-context'
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from '@/components/ui/accordion'
 const faqList = [
   {
     question: 'ما أنواع الصور المدعومة؟',
@@ -38,19 +32,6 @@ const faqList = [
     question: 'هل التقارير مدعومة باللغة العربية؟',
     answer: 'نعم، يمكنك توليد تقارير ذكية بالعربية والإنجليزية.',
     value: 'faq-2',
-  },
-  {
-    question:
-      'ما الذي يجعل E-Trek مختلفًا عن الأنظمة الجغرافية البيئية الأخرى؟',
-    answer:
-      'E-Trek ليس مجرد نظام عرض خرائط، بل منصة تحليل ذكية تعتمد على الذكاء الاصطناعي لتفسير البيانات البيئية من الأقمار الصناعية والطائرات المسيّرة، وتقديم تنبؤات قابلة للتنفيذ.',
-    value: 'faq-3',
-  },
-  {
-    question: 'كيف يخدم المشروع الأهداف الوطنية مثل رؤية السعودية 2030؟',
-    answer:
-      'يدعم E-Trek مبادرة السعودية الخضراء عبر مراقبة مؤشرات التشجير والتصحر والغطاء النباتي بدقة، مما يساعد في اتخاذ قرارات مبنية على بيانات حقيقية لتحقيق أهداف الاستدامة.',
-    value: 'faq-4',
   },
 ]
 
@@ -73,7 +54,7 @@ export function Homepage() {
                 {t('home.hero.title')}
               </p>
               <button className="bg-amber-900 text-white text-xs md:text-base py-1 px-1 md:px-6 rounded hover:bg-amber-800 transition">
-                <Link href="/dashboard">إبدأ الآن</Link>
+                <Link href="/faq">{t('home.hero.learnMoreBtn')}</Link>
               </button>
             </div>
 
@@ -189,7 +170,7 @@ export function Homepage() {
         <section id="faq" className="container py-24 sm:py-32">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-right">
             الأسئلة{' '}
-            <span className="bg-gradient-to-b  text-transparent bg-clip-text">
+            <span className="bg-gradient-to-b from-green-400/60 to-green-700 text-transparent bg-clip-text">
               الشائعة
             </span>
           </h2>

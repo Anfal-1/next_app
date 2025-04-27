@@ -49,7 +49,7 @@ export function Navbar() {
           </Link>
 
           <Link
-            href="#faq"
+            id="#faq"
             className="text-sm font-medium text-gray-700 transition-colors hover:text-green-700 dark:text-gray-300 dark:hover:text-green-400"
           >
             {t('nav.faq')}
@@ -96,7 +96,7 @@ export function Navbar() {
               </Link>
 
               <Link
-                href="#faq"
+                href="/faq"
                 className="text-sm font-medium text-gray-700 transition-colors hover:text-green-700 dark:text-gray-300 dark:hover:text-green-400"
                 onClick={() => setIsMenuOpen(false)}
               >

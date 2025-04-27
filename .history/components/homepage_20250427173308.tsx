@@ -73,7 +73,7 @@ export function Homepage() {
                 {t('home.hero.title')}
               </p>
               <button className="bg-amber-900 text-white text-xs md:text-base py-1 px-1 md:px-6 rounded hover:bg-amber-800 transition">
-                <Link href="/dashboard">إبدأ الآن</Link>
+                <Link href="/dashboard">{t('home.hero.learnMoreBtn')}</Link>
               </button>
             </div>
 
