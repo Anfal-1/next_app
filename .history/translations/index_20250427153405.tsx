@@ -208,7 +208,7 @@ export const translations = {
     'ai.uploadTab': 'رفع الصور',
     'ai.resultsTab': 'النتائج',
     'ai.uploadImage': 'رفع صورة للتحليل',
-    'ai.dragAndDrop': ' انقر للاختيار',
+    'ai.dragAndDrop': 'اسحب وأفلت الصورة هنا أو انقر للاختيار',
     'ai.supportedFormats': 'الصيغ المدعومة: TIF, TIFF',
     'ai.browseFiles': 'تصفح الملفات',
     'ai.note': 'ملاحظة:',

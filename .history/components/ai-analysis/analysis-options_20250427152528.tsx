@@ -67,6 +67,7 @@ export function AnalysisOptions({
                 className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 flex items-center"
               >
                 {t('ai.treeDensityAnalysis')}
+                <span className="ml-2 text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 px-2 py-0.5 rounded"></span>
               </Label>
             </div>
           </RadioGroup>

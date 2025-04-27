@@ -72,6 +72,7 @@ export default function Dashboard() {
         </header>
 
         <main className="p-4 md:p-6 overflow-auto h-[calc(100vh-64px)]">
+          <SimpleTreeAnalysis />
           {/* التحليل الذكي أول شيء */}
           <AIAnalysisSection />
 
@@ -87,7 +88,7 @@ export default function Dashboard() {
               />
             </div>
           </Card>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-6 mb-6">
             <SummaryCards />
           </div>
 

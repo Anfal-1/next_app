@@ -77,17 +77,9 @@ export default function Dashboard() {
 
           <Card className="mb-6 dark:bg-gray-800 dark:border-gray-700">
             <div className="p-4 border-b border-green-100 dark:border-gray-700"></div>
-            <div className="p-4">
-              <iframe
-                src="https://ee-anfalalharbi826.projects.earthengine.app/view/e-analysis"
-                width="100%"
-                height="500"
-                style={{ border: 'none' }}
-                loading="lazy"
-              />
-            </div>
+            <div className="p-4"></div>
           </Card>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          <div className="grid grid-cols-3 md:grid-cols-1 gap-6 mb-6">
             <SummaryCards />
           </div>
 
@@ -103,7 +95,13 @@ export default function Dashboard() {
                   </p>
                 </div>
                 <div className="h-[400px] w-full">
-                  <MapView />
+                  <iframe
+                    src="https://ee-anfalalharbi826.projects.earthengine.app/view/e-analysis"
+                    width="100%"
+                    height="500"
+                    style={{ border: 'none' }}
+                    loading="lazy"
+                  />
                 </div>
               </CardContent>
             </Card>

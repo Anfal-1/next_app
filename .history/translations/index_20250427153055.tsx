@@ -205,10 +205,11 @@ export const translations = {
 
     // AI Analysis
     'ai.title': 'التحليل البيئي بالذكاء الاصطناعي',
+    'ai.subtitle': 'تحليل الصور الفضائية وصور الطائرات بدون طيار',
     'ai.uploadTab': 'رفع الصور',
     'ai.resultsTab': 'النتائج',
     'ai.uploadImage': 'رفع صورة للتحليل',
-    'ai.dragAndDrop': ' انقر للاختيار',
+    'ai.dragAndDrop': 'اسحب وأفلت الصورة هنا أو انقر للاختيار',
     'ai.supportedFormats': 'الصيغ المدعومة: TIF, TIFF',
     'ai.browseFiles': 'تصفح الملفات',
     'ai.note': 'ملاحظة:',

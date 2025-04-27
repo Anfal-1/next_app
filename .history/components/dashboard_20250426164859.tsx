@@ -14,8 +14,7 @@ import { DesertificationComparison } from '@/components/desertification-comparis
 import { ThemeToggle } from '@/components/theme-toggle'
 import { LanguageToggle } from '@/components/language-toggle'
 import { AIAnalysisSection } from '@/components/ai-analysis/ai-analysis-section'
-import { SimpleTreeAnalysis } from '@/components/ai-analysis/SimpleTreeAnalysis'
-import TestConnectionButton from '@/components/TestConnectionButton'
+
 // مكونات تُحمّل فقط على العميل
 const MapView = dynamic(() => import('@/components/map-view'), { ssr: false })
 const NDVIChart = dynamic(() => import('@/components/ndvi-chart'), {
@@ -87,7 +86,7 @@ export default function Dashboard() {
               />
             </div>
           </Card>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-6 mb-6">
             <SummaryCards />
           </div>
 

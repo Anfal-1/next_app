@@ -87,7 +87,7 @@ export default function Dashboard() {
               />
             </div>
           </Card>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          <div className="grid grid-cols-3 md:grid-cols-1 gap-6 mb-6">
             <SummaryCards />
           </div>
 
@@ -95,16 +95,11 @@ export default function Dashboard() {
             <Card className="dark:bg-gray-800 dark:border-gray-700">
               <CardContent className="p-0">
                 <div className="p-4 border-b border-green-100 dark:border-gray-700">
-                  <h2 className="text-lg font-semibold text-green-800 dark:text-green-400">
-                    {t('map.title')}
-                  </h2>
                   <p className="text-sm text-green-600 dark:text-green-500">
                     {t('map.subtitle')}
                   </p>
                 </div>
-                <div className="h-[400px] w-full">
-                  <MapView />
-                </div>
+                <div className="h-[400px] w-full"></div>
               </CardContent>
             </Card>
 

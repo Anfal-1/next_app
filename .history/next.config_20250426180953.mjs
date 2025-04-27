@@ -18,6 +18,7 @@ const securityHeaders = [
       img-src 'self' data: https://*.tile.openstreetmap.org;
       frame-src 'self' https://ee-anfalalharbi826.projects.earthengine.app/view/e-analysis;
       child-src 'self' https://ee-anfalalharbi826.projects.earthengine.app/view/e-analysis;
+      connect-src 'self';
       connect-src 'self' https://api-inference.huggingface.co;
     `.replace(/\n/g, ''),
   },
