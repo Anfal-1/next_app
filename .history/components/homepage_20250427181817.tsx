@@ -70,7 +70,7 @@ export function Homepage() {
                 E-Trek
               </h1>
               <p className="text-xs md:text-2xl mb-6 text-gray-800">
-                نحو مستقبل أكثر استدامة
+                {t('home.hero.title')}
               </p>
               <button className="bg-amber-900 text-white text-xs md:text-base py-1 px-1 md:px-6 rounded hover:bg-amber-800 transition">
                 <Link href="/dashboard">إبدأ الآن</Link>
@@ -106,52 +106,52 @@ export function Homepage() {
         <section className="bg-white py-20 px-6">
           <div className="max-w-7xl mx-auto flex flex-col gap-10">
             {/* عنوان السكشن */}
-            <h2 className="text-1xl font-bold text-center text-[#5C4033] mb-8">
-              كيف E-Trek يستخدم الذكاء الإصطناعي لمكافحة التصحر
+            <h2 className="text-2xl font-bold text-center text-[#5C4033] mb-8">
+              كيف يستخدم الذكاء الإصطناعي لمكافحة التصحر
             </h2>
 
-            {/* الكروت بشكل Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
+            {/* الصور داخل كروت */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {/* الكارد الأول */}
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full">
+              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
                 <Image
                   src="/images/image1.jpg"
                   alt="نماذج تعلم الآلة"
-                  width={240}
-                  height={160}
+                  width={500}
+                  height={300}
                   className="w-full h-auto object-cover select-none pointer-events-none"
                 />
               </div>
 
               {/* الكارد الثاني */}
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full">
+              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
                 <Image
                   src="/images/image2.jpg"
                   alt="تحليل صور الدرونز"
-                  width={240}
-                  height={160}
+                  width={500}
+                  height={300}
                   className="w-full h-auto object-cover select-none pointer-events-none"
                 />
               </div>
 
               {/* الكارد الثالث */}
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full">
+              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
                 <Image
                   src="/images/image3.jpg"
                   alt="تقارير AI التنبؤية"
-                  width={240}
-                  height={160}
+                  width={500}
+                  height={300}
                   className="w-full h-auto object-cover select-none pointer-events-none"
                 />
               </div>
 
               {/* الكارد الرابع */}
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full">
+              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
                 <Image
                   src="/images/image4.jpg"
                   alt="تحليل صور الأقمار الصناعية"
-                  width={240}
-                  height={160}
+                  width={500}
+                  height={300}
                   className="w-full h-auto object-cover select-none pointer-events-none"
                 />
               </div>
@@ -179,7 +179,7 @@ export function Homepage() {
               alt="ميزة 2"
               width={1200}
               height={500}
-              className="w-full h-auto object-cover select-none pointer-events-none"
+              className="w-full h-64 object-cover select-none pointer-events-none"
             />
             <Image
               src="/images/Feature33.jpg"

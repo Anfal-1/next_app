@@ -70,7 +70,7 @@ export function Homepage() {
                 E-Trek
               </h1>
               <p className="text-xs md:text-2xl mb-6 text-gray-800">
-                نحو مستقبل أكثر استدامة
+                {t('home.hero.title')}
               </p>
               <button className="bg-amber-900 text-white text-xs md:text-base py-1 px-1 md:px-6 rounded hover:bg-amber-800 transition">
                 <Link href="/dashboard">إبدأ الآن</Link>
@@ -103,61 +103,47 @@ export function Homepage() {
             />
           </div>
         </section>
-        <section className="bg-white py-20 px-6">
-          <div className="max-w-7xl mx-auto flex flex-col gap-10">
-            {/* عنوان السكشن */}
-            <h2 className="text-1xl font-bold text-center text-[#5C4033] mb-8">
-              كيف E-Trek يستخدم الذكاء الإصطناعي لمكافحة التصحر
-            </h2>
+        <section class="py-12 px-6 bg-white">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    
+    <!-- الكارد الأول -->
+    <div class="bg-gray-100 rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+      <img src="/path/to/your/image1.jpg" alt="نماذج تعلم الآلة" class="w-16 h-16 mb-4">
+      <h3 class="text-lg font-semibold mb-2">نماذج تعلم الآلة</h3>
+      <p class="text-gray-600 text-sm">
+        تحلل أنظمة الذكاء الاصطناعي الأنماط البيئية للتنبؤ بمستقبل الأراضي الزراعية.
+      </p>
+    </div>
 
-            {/* الكروت بشكل Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
-              {/* الكارد الأول */}
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full">
-                <Image
-                  src="/images/image1.jpg"
-                  alt="نماذج تعلم الآلة"
-                  width={240}
-                  height={160}
-                  className="w-full h-auto object-cover select-none pointer-events-none"
-                />
-              </div>
+    <!-- الكارد الثاني -->
+    <div class="bg-gray-100 rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+      <img src="/path/to/your/image2.jpg" alt="تحليل صور الدرونز" class="w-16 h-16 mb-4">
+      <h3 class="text-lg font-semibold mb-2">تحليل صور الدرونز</h3>
+      <p class="text-gray-600 text-sm">
+        تحديد المناطق التي تحتاج إلى تدخل سريع للحفاظ على استدامة الأراضي.
+      </p>
+    </div>
 
-              {/* الكارد الثاني */}
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full">
-                <Image
-                  src="/images/image2.jpg"
-                  alt="تحليل صور الدرونز"
-                  width={240}
-                  height={160}
-                  className="w-full h-auto object-cover select-none pointer-events-none"
-                />
-              </div>
+    <!-- الكارد الثالث -->
+    <div class="bg-gray-100 rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+      <img src="/path/to/your/image3.jpg" alt="تقارير AI التنبؤية" class="w-16 h-16 mb-4">
+      <h3 class="text-lg font-semibold mb-2">تقارير AI التنبؤية</h3>
+      <p class="text-gray-600 text-sm">
+        إنتاج تقارير ذكية لمساعدة الجهات البيئية في اتخاذ قرارات مستنيرة.
+      </p>
+    </div>
 
-              {/* الكارد الثالث */}
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full">
-                <Image
-                  src="/images/image3.jpg"
-                  alt="تقارير AI التنبؤية"
-                  width={240}
-                  height={160}
-                  className="w-full h-auto object-cover select-none pointer-events-none"
-                />
-              </div>
+    <!-- الكارد الرابع -->
+    <div class="bg-gray-100 rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+      <img src="/path/to/your/image4.jpg" alt="تحليل صور الأقمار الصناعية" class="w-16 h-16 mb-4">
+      <h3 class="text-lg font-semibold mb-2">تحليل صور الأقمار الصناعية</h3>
+      <p class="text-gray-600 text-sm">
+        تستخدم تقنيات الذكاء الاصطناعي للكشف عن التصحر وتحديد المناطق المتأثرة.
+      </p>
+    </div>
 
-              {/* الكارد الرابع */}
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full">
-                <Image
-                  src="/images/image4.jpg"
-                  alt="تحليل صور الأقمار الصناعية"
-                  width={240}
-                  height={160}
-                  className="w-full h-auto object-cover select-none pointer-events-none"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+  </div>
+</section>
 
         <section className="bg-white py-20 px-6">
           <div className="flex flex-col gap-10">
