@@ -103,58 +103,62 @@ export function Homepage() {
             />
           </div>
         </section>
+        <section className="bg-white py-20 px-6">
         <section className="bg-white py-20 px-6 animate-fade-in">
-          <div className="max-w-7xl mx-auto flex flex-col gap-10">
-            {/* عنوان السكشن */}
-            <h2 className="text-1xl font-bold text-center text-[#5C4033] mb-12">
-              كيف E-Trek يستخدم الذكاء الإصطناعي لمكافحة التصحر
-            </h2>
+  <div className="max-w-7xl mx-auto flex flex-col gap-10">
+    
+    {/* عنوان السكشن */}
+    <h2 className="text-2xl font-bold text-center text-[#5C4033] mb-12">
+      كيف E-Trek يستخدم الذكاء الإصطناعي لمكافحة التصحر
+    </h2>
 
-            {/* الكروت بشكل Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
-              {/* الكارد التفاعلي */}
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl hover:bg-gray-200">
-                <Image
-                  src="/images/image1.jpg"
-                  alt="نماذج تعلم الآلة"
-                  width={240}
-                  height={160}
-                  className="w-full h-auto object-cover select-none pointer-events-none"
-                />
-              </div>
+    {/* الكروت بشكل Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
+      
+      {/* الكارد التفاعلي */}
+      <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl hover:bg-gray-200">
+        <Image
+          src="/images/image1.jpg"
+          alt="نماذج تعلم الآلة"
+          width={240}
+          height={160}
+          className="w-full h-auto object-cover select-none pointer-events-none"
+        />
+      </div>
 
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl hover:bg-gray-200">
-                <Image
-                  src="/images/image2.jpg"
-                  alt="تحليل صور الدرونز"
-                  width={240}
-                  height={160}
-                  className="w-full h-auto object-cover select-none pointer-events-none"
-                />
-              </div>
+      <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl hover:bg-gray-200">
+        <Image
+          src="/images/image2.jpg"
+          alt="تحليل صور الدرونز"
+          width={240}
+          height={160}
+          className="w-full h-auto object-cover select-none pointer-events-none"
+        />
+      </div>
 
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl hover:bg-gray-200">
-                <Image
-                  src="/images/image3.jpg"
-                  alt="تقارير AI التنبؤية"
-                  width={240}
-                  height={160}
-                  className="w-full h-auto object-cover select-none pointer-events-none"
-                />
-              </div>
+      <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl hover:bg-gray-200">
+        <Image
+          src="/images/image3.jpg"
+          alt="تقارير AI التنبؤية"
+          width={240}
+          height={160}
+          className="w-full h-auto object-cover select-none pointer-events-none"
+        />
+      </div>
 
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl hover:bg-gray-200">
-                <Image
-                  src="/images/image4.jpg"
-                  alt="تحليل صور الأقمار الصناعية"
-                  width={240}
-                  height={160}
-                  className="w-full h-auto object-cover select-none pointer-events-none"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+      <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl hover:bg-gray-200">
+        <Image
+          src="/images/image4.jpg"
+          alt="تحليل صور الأقمار الصناعية"
+          width={240}
+          height={160}
+          className="w-full h-auto object-cover select-none pointer-events-none"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
         <section className="bg-white py-20 px-6">
           <div className="flex flex-col gap-10">
             {/* عنوان السكشن الثاني */}

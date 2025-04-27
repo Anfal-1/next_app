@@ -103,17 +103,17 @@ export function Homepage() {
             />
           </div>
         </section>
-        <section className="bg-white py-20 px-6 animate-fade-in">
+        <section className="bg-white py-20 px-6">
           <div className="max-w-7xl mx-auto flex flex-col gap-10">
             {/* عنوان السكشن */}
-            <h2 className="text-1xl font-bold text-center text-[#5C4033] mb-12">
+            <h2 className="text-2xl font-bold text-center text-[#5C4033] mb-12">
               كيف E-Trek يستخدم الذكاء الإصطناعي لمكافحة التصحر
             </h2>
 
             {/* الكروت بشكل Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
               {/* الكارد التفاعلي */}
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl hover:bg-gray-200">
+              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                 <Image
                   src="/images/image1.jpg"
                   alt="نماذج تعلم الآلة"
@@ -123,7 +123,7 @@ export function Homepage() {
                 />
               </div>
 
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl hover:bg-gray-200">
+              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                 <Image
                   src="/images/image2.jpg"
                   alt="تحليل صور الدرونز"
@@ -133,7 +133,7 @@ export function Homepage() {
                 />
               </div>
 
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl hover:bg-gray-200">
+              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                 <Image
                   src="/images/image3.jpg"
                   alt="تقارير AI التنبؤية"
@@ -143,7 +143,7 @@ export function Homepage() {
                 />
               </div>
 
-              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl hover:bg-gray-200">
+              <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden w-60 sm:w-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                 <Image
                   src="/images/image4.jpg"
                   alt="تحليل صور الأقمار الصناعية"

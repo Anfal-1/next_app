@@ -106,7 +106,7 @@ export function Homepage() {
         <section className="bg-white py-20 px-6 animate-fade-in">
           <div className="max-w-7xl mx-auto flex flex-col gap-10">
             {/* عنوان السكشن */}
-            <h2 className="text-1xl font-bold text-center text-[#5C4033] mb-12">
+            <h2 className="text-2xl font-bold text-center text-[#5C4033] mb-12">
               كيف E-Trek يستخدم الذكاء الإصطناعي لمكافحة التصحر
             </h2>
 
